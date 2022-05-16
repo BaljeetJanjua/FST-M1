@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="My Test Suite">
+    <test name="First Test">
+        <classes>
+            <!-- <class name="SeleniumActivities.Activity1" /> -->
+            <!-- <class name="SeleniumActivities.Activity2" />
+            <class name="SeleniumActivities.Activity3" />
+            <class name="SeleniumActivities.Activity4" />
+            <class name="SeleniumActivities.Activity5" />
+            <class name="SeleniumActivities.Activity6" />
+            <class name="SeleniumActivities.Activity7" />
+            <class name="SeleniumActivities.Activity8" />
+            <class name="SeleniumActivities.Activity9" />-->
+            <class name="SeleniumActivities.Activity7" />
+        </classes>
+    </test>
+</suite>
