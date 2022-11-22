@@ -15,7 +15,7 @@ public class LoginTestSteps {
     WebDriver driver;
     WebDriverWait wait;
 
-    @Given("^User is on Login page$")
+    @Given("^User is on the Login page$")
     public void loginPage() {
         //Setup instances
         driver = new FirefoxDriver();
@@ -25,8 +25,8 @@ public class LoginTestSteps {
         driver.get("https://www.training-support.net/selenium/login-form");
     }
 
-    @When("^User enters username and password$")
-    public void enterCredentials() {
+    @When("^User enters credentials username and password$")
+    public void EnterCredentials() {
         //Enter username
         driver.findElement(By.id("username")).sendKeys("admin");
         //Enter password
@@ -35,7 +35,7 @@ public class LoginTestSteps {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
-    @When("^User enters \"(.*)\" and \"(.*)\"$")
+    @When("^User enters credentials \"(.*)\" and \"(.*)\"$")
     public void user_enters_and(String username, String password) throws Throwable {
         //Enter username from Feature file
         driver.findElement(By.id("username")).sendKeys(username);
@@ -45,7 +45,7 @@ public class LoginTestSteps {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
-    @Then("^Read the page title and confirmation message$")
+    @Then("^Read the page title message and confirmation message$")
     public void readTitleAndHeading() {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("action-confirmation")));
 
@@ -61,10 +61,10 @@ public class LoginTestSteps {
         Assert.assertEquals(confirmMessage, "Welcome Back, admin");
     }
 
-    @And("^Close the Browser$")
+    @And("^Close the Browser URL$")
     public void closeBrowser() {
         //Close browser
-        driver.close();
+        driver.quit();
     }
 
 }
