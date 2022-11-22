@@ -12,7 +12,10 @@ import io.cucumber.junit.CucumberOptions;
         //tags = "@Activity2"
         tags = "@Activity3",
         monochrome = true,
-        plugin = {"html:target/cucumber-reports/reports"}
+        //plugin = {"html:target/cucumber-reports/reports"},
+        //plugin = {"html: test-reports"},
+        //plugin = {"json: test-reports/json-report.json"}
+        plugin = {"pretty"}
 )
 
 public class ActivityRunner {
